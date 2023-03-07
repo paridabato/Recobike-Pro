@@ -1,15 +1,15 @@
 {
   "expo": {
-    "name": "recobike-app",
-    "slug": "recobike-app",
+    "name": "Recobike Pro",
+    "slug": "recobike-pro",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/favicon-recobike-2.png",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#000000"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -18,16 +18,24 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.recobike.pro"
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/favicon-recobike-2.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.recobike.pro"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
-    }
+      "favicon": "./assets/favicon-recobike-2.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "29fa82ef-9f79-4c88-8398-97f5cbbe6bf9"
+      }
+    },
+    "owner": "parida01"
   }
 }

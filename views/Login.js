@@ -108,7 +108,7 @@ function Login({ navigation }) {
                         <Text style={styles.paragraph}>Rester connecté ?</Text>
                     </View>
                     <View style={styles.center}>
-                        <Pressable style={styles.button} onPress={() => navigation.navigate('Home')}>
+                        <Pressable style={styles.button} onPress={() => navigation.navigate('Action')}>
                             <Text style={styles.text_button}>Connexion</Text>
                         </Pressable>
                     </View>

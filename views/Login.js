@@ -2,6 +2,7 @@ import {Image, StyleSheet, Text, View, TextInput, Pressable} from "react-native"
 import { StatusBar } from 'expo-status-bar';
 import Checkbox from 'expo-checkbox';
 import React, { useState } from 'react';
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 
 
@@ -10,83 +11,72 @@ function Login({ navigation }) {
     const [isChecked, setChecked] = useState(false);
     const styles = StyleSheet.create({
         am_signin_wrapper: {
-            minHeight: '100%',
+            // minHeight: hp(100),
             // justifyContent: 'center',
             alignItems: 'center',
             flex: 1,
             backgroundColor: '#fff'
         },
         am_signin_box: {
-            width: '100%',
-            marginTop: '15%'
-        },
-        tx_center: {
-            textAlign: 'center',
-            color: 'rgba(255, 255, 255, 0.5)',
-            marginTop: '15%',
-            marginBottom: '20%'
+            width: wp(100),
+            marginTop: hp(5)
         },
         row_no_gutters: {
+            width: wp(100),
             backgroundColor: '#fff',
-            paddingHorizontal: '10%'
+            paddingHorizontal: wp(10)
         },
         center: {
             alignItems: 'center',
         },
         text: {
             alignItems: 'center',
-            fontSize: '30%',
+            fontSize: wp(7),
             fontWeight: '500',
-            marginVertical: '15%',
-        },
-        tx_gray_800: {
-            color: '#343a40',
-            marginBottom: '10%',
-            marginTop: '10%',
-            fontSize: '25%',
-            fontWeight: '500'
+            marginVertical: hp(5),
         },
         input: {
-            height: 60,
+            height: hp(7),
             borderWidth: 2,
             borderColor: '#000',
-            borderRadius: '22',
-            padding: 10,
-            fontSize: '30%',
-            marginBottom: '3%'
+            borderRadius: hp(3),
+            paddingVertical: hp(1),
+            paddingHorizontal: wp(5),
+            fontSize: wp(6),
+            marginBottom: hp(1)
         },
         label: {
-            marginBottom: '2%',
-            fontSize: '25%',
+            marginBottom: hp(1),
+            fontSize: wp(6),
             fontWeight: '500',
-            marginLeft: '2%'
+            marginLeft: wp(2)
         },
         form_group: {
-            marginBottom: '5%'
+            marginBottom: hp(1)
         },
         button: {
             alignItems: 'center',
             justifyContent: 'center',
-            height: 50,
-            width: '60%',
-            borderRadius: '22',
+            height: hp(6),
+            width: wp(45),
+            borderRadius: hp(3),
             backgroundColor: '#96bf1f'
         },
         text_button: {
-            fontSize: 25,
+            fontSize: hp(3),
             fontWeight: '800',
             color: '#fff'
         },
         section: {
             flexDirection: 'row',
             alignItems: 'center',
-            marginBottom: 20
+            marginBottom: hp(3)
         },
         checkbox: {
             margin: 8
         },
         paragraph: {
-            fontSize: 25,
+            fontSize: wp(6),
             fontWeight: '500',
         },
     });

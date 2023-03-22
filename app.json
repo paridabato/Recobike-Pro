@@ -36,6 +36,14 @@
         "projectId": "29fa82ef-9f79-4c88-8398-97f5cbbe6bf9"
       }
     },
-    "owner": "parida01"
+    "owner": "parida01",
+    "plugins": [
+      [
+        "expo-barcode-scanner",
+        {
+          "cameraPermission": "Allow $(PRODUCT_NAME) to access camera."
+        }
+      ]
+    ]
   }
 }

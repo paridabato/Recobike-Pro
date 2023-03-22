@@ -1,6 +1,7 @@
 import {Image, StyleSheet, Text, View, TextInput, Pressable} from "react-native";
 import { StatusBar } from 'expo-status-bar';
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
+import React from "react";
 
 function Action({ navigation }){
     const styles = StyleSheet.create({
@@ -23,7 +24,7 @@ function Action({ navigation }){
         },
         text: {
             alignItems: 'center',
-            fontSize: wp(5.5),
+            fontSize: wp(5),
             fontWeight: '500',
             marginVertical: hp(5),
         },
@@ -47,10 +48,15 @@ function Action({ navigation }){
             marginVertical: hp(1),
         },
         text_button: {
-            fontSize: hp(3),
+            fontSize: wp(5),
             fontWeight: '800',
             color: '#fff',
             textTransform: 'uppercase'
+        },
+        footer:{
+            position: 'absolute',
+            bottom: 0,
+            marginBottom: hp(5)
         }
     }
     );
@@ -65,7 +71,7 @@ function Action({ navigation }){
                         <Text style={styles.text}>Veuillez sélectionner une action</Text>
                     </View>
                     <View style={styles.center}>
-                        <Pressable style={styles.button} onPress={() => navigation.navigate('Action')}>
+                        <Pressable style={styles.button} onPress={() => navigation.navigate('Enregisterer')}>
                             <Text style={styles.text_button}>Enregistrer un velo</Text>
                         </Pressable>
                     </View>
@@ -84,12 +90,12 @@ function Action({ navigation }){
                             <Text style={styles.text_button}>Portabilite</Text>
                         </Pressable>
                     </View>
-                    <View style={styles.center}>
-                        <Pressable style={styles.button_red} onPress={() => navigation.navigate('Action')}>
-                            <Text style={styles.text_button}>Deconnexion</Text>
-                        </Pressable>
-                    </View>
                 </View>
+            </View>
+            <View style={styles.footer}>
+                <Pressable style={styles.button_red} onPress={() => navigation.navigate('Login')}>
+                    <Text style={styles.text_button}>Deconnexion</Text>
+                </Pressable>
             </View>
         </View>
     )

@@ -63,7 +63,7 @@ function Login({ navigation }) {
             backgroundColor: '#96bf1f'
         },
         text_button: {
-            fontSize: hp(3),
+            fontSize: wp(7),
             fontWeight: '800',
             color: '#fff'
         },
